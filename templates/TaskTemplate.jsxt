@@ -1,0 +1,21 @@
+<li className={props.taskClassName}>
+  <button className="delete" onClick={props.deleteThisTask}>
+    &times;
+  </button>
+
+  <input
+    type="checkbox"
+    readOnly={true}
+    checked={props.task.checked}
+    onClick={props.toggleChecked} />
+
+  { props.showPrivateButton ? (
+    <button className="toggle-private" onClick={props.togglePrivate}>
+      { props.task.private ? "Private" : "Public" }
+    </button>
+  ) : ''}
+
+  <span className="text">
+    <strong>{props.task.username}</strong>: {props.task.text}
+  </span>
+</li>
