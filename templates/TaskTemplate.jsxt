@@ -1,3 +1,5 @@
+foo = "bar";
+
 <li className={props.taskClassName}>
   <button className="delete" onClick={props.deleteThisTask}>
     &times;
